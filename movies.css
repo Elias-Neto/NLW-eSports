@@ -7,7 +7,7 @@
 :root {
   font-size: 62.5%;
 
-  --gradient: linear-gradient(90deg, #be72fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+  --gradient: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
   --bg-section: hsl(257, 16%, 18%);
 }
 
@@ -17,7 +17,7 @@ body {
 
   color: white;
 
-  background-image: url(./bg.jpg);
+  background-image: url(./bg-movies.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -63,12 +63,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-}
-
-@media (max-width: 1024px) {
-  main {
-    margin-bottom: 4.4rem;
-  }
+  margin-bottom: 4.4rem;
 }
 
 /* === SECTIONs ======= */
@@ -79,15 +74,15 @@ section {
   padding-top: .4rem;
 }
 
-section#my-games {
+main section:nth-child(1) {
   animation: fromBottomToTop .3s;
 }
 
-section#my-channels {
+main section:nth-child(2) {
   animation: fromBottomToTop .6s;
 }
 
-section#my-socialmedias {
+main section:nth-child(3) {
   animation: fromBottomToTop .9s;
 }
 
@@ -131,15 +126,10 @@ section ul li:hover {
   transform: scale(1.1);
 }
 
-section#my-games ul img {
+section ul img {
   width: 9rem;
   height: 12rem;
   border-radius: .8rem;
-}
-
-section#my-channels ul img {
-  border-radius: 50%;
-  border: 1px solid #443E54;
 }
 
 /* === Animations ======= */
