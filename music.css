@@ -7,7 +7,7 @@
 :root {
   font-size: 62.5%;
 
-  --gradient: linear-gradient(90deg, #be72fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+  --gradient: linear-gradient(287.56deg, #1db954 0%, #191414 100%);
   --bg-section: hsl(257, 16%, 18%);
 }
 
@@ -17,11 +17,15 @@ body {
 
   color: white;
 
-  background-image: url(./bg-eSports.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-color: #121214;
+  /* background-image: url(./bg-eSports.jpg); */
+  /* background-position: top center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: 100% auto; */
+  /* background-color: #121214; */
+  background: var(--gradient);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #wrapper {
@@ -42,7 +46,7 @@ header#img-profile {
   height: 12rem;
   margin: auto;
   border-radius: 50%;
-  background: var(--gradient);
+  background: white;
 
   transition: transform .3s;
 }
@@ -74,7 +78,7 @@ main {
 /* === SECTIONs ======= */
 
 section {
-  background-image: var(--gradient);
+  background-color: white;
   border-radius: 1rem;
   padding-top: .4rem;
 }
