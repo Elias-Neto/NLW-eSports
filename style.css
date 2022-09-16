@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --gradient: linear-gradient(90deg, #be72fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+  --bg-section: hsl(257, 16%, 18%);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+
+  color: white;
+
+  background-image: url(./bg.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #121214;
+}
+
+#wrapper {
+  margin: auto;
+  max-width: 58rem;
+  width: 90%;
+}
+
+/* === HEADER ======= */
+
+header#img-profile {
+  margin-block: 3.2rem;
+  animation: fromTopToBottom .6s;
+}
+
+#border-gradient {
+  width: 12rem;
+  height: 12rem;
+  margin: auto;
+  border-radius: 50%;
+  background: var(--gradient);
+
+  transition: transform .3s;
+}
+
+header div#border-gradient:hover {
+  transform: scale(1.1);
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem;
+}
+
+/* === MAIN ======= */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+@media (max-width: 1024px) {
+  main {
+    margin-bottom: 4.4rem;
+  }
+}
+
+/* === SECTIONs ======= */
+
+section {
+  background-image: var(--gradient);
+  border-radius: 1rem;
+  padding-top: .4rem;
+}
+
+section#my-games {
+  animation: fromBottomToTop .3s;
+}
+
+section#my-channels {
+  animation: fromBottomToTop .6s;
+}
+
+section#my-socialmedias {
+  animation: fromBottomToTop .9s;
+}
+
+main div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  background-color: var(--bg-section);
+  padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+
+  border-radius: .8rem;
+}
+
+section header h2 {
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 160%;
+  letter-spacing: -0.047rem;
+}
+
+section header p {
+  line-height: 160%;
+  letter-spacing: -.018rem;
+  color: #a1a1aa;
+}
+
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+
+  list-style: none;
+}
+
+section ul li {
+  transition: transform .3s;
+}
+
+section ul li:hover {
+  transform: scale(1.1);
+}
+
+section#my-games ul img {
+  width: 9rem;
+  height: 12rem;
+  border-radius: .8rem;
+}
+
+section#my-channels ul img {
+  border-radius: 50%;
+  border: 1px solid #443E54;
+}
+
+/* === Animations ======= */
+
+@keyframes fromTopToBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottomToTop {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
