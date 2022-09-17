@@ -71,11 +71,12 @@ nav div {
   border-radius: .8rem;
 
   cursor: pointer;
-  transition: transform .2s;
+  transition: transform .3s;
 }
 
 nav button {
   font-size: 1.8rem;
+  font-weight: 600;
   color: white;
 
   padding: 1rem 2rem;
@@ -88,6 +89,11 @@ nav button {
 
 nav div:hover {
   transform: translateY(-1rem);
+  
+}
+
+nav button:hover {
+  background: var(--gradient);
 }
 
 /* === MAIN ======= */
@@ -112,16 +118,16 @@ section {
   padding-top: 0.4rem;
 }
 
-section#my-games {
-  animation: fromBottomToTop 0.3s;
+main section:nth-child(1) {
+  animation: fromBottomToTop .3s;
 }
 
-section#my-channels {
-  animation: fromBottomToTop 0.6s;
+main section:nth-child(2) {
+  animation: fromBottomToTop .6s;
 }
 
-section#my-socialmedias {
-  animation: fromBottomToTop 0.9s;
+main section:nth-child(3) {
+  animation: fromBottomToTop .9s;
 }
 
 main div {
@@ -164,15 +170,30 @@ section ul li:hover {
   transform: scale(1.1);
 }
 
-section#my-games ul img {
+section ul img {
   width: 9rem;
   height: 12rem;
   border-radius: 0.8rem;
 }
 
-section#my-channels ul img {
+/* Sections Main-Games */
+
+main#games section:nth-child(2) ul img {
+  width: inherit;
+  height: inherit;
   border-radius: 50%;
   border: 1px solid #443e54;
+}
+
+body.main-movies main#games {
+  animation: disappear 1s forwards;
+  display: none;
+}
+
+/* Sections Main-Movies */
+
+body.main-movies main#movies section{
+  animation: fromBottomToTop 1s;
 }
 
 /* === Animations ======= */
@@ -198,5 +219,29 @@ section#my-channels ul img {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fromLeftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromRightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
