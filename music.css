@@ -25,7 +25,7 @@ body {
   background: var(--gradient);
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #wrapper {
@@ -135,15 +135,41 @@ section ul li:hover {
   transform: scale(1.1);
 }
 
-section#my-games ul img {
-  width: 9rem;
-  height: 12rem;
+section ul li a.music {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  text-decoration: none;
+  color: black;
+  /* font-size: 1.2rem; */
+  font-weight: 600;
+
+  background-color: #1db954;
+  padding: 1rem;
   border-radius: .8rem;
 }
 
-section#my-channels ul img {
+section#my-musics ul {
+  flex-direction: column;
+}
+
+section#my-musics ul li:hover {
+  transform: scale(1.05);
+}
+
+section#my-games ul img {
+  width: 9rem;
+  height: 9rem;
   border-radius: 50%;
-  border: 1px solid #443E54;
+}
+
+section#my-channels ul img {
+  width: 9rem;
+  height: 12rem;
+  border-radius: .8rem;
 }
 
 /* === Animations ======= */
