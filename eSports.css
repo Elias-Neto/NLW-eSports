@@ -6,10 +6,8 @@
 
 :root {
   font-size: 62.5%;
-
-  --gradient: linear-gradient(90deg, #be72fc 0%, #43e7ad 50.52%, #e2d45c 100%);
-  --bg-section: hsl(257, 16%, 18%);
 }
+
 
 body {
   font-size: 1.6rem;
@@ -22,6 +20,9 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: #121214;
+
+  --gradient: linear-gradient(90deg, #be72fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+  --bg-section: hsl(257, 16%, 18%);
 }
 
 #wrapper {
@@ -34,7 +35,7 @@ body {
 
 header#img-profile {
   margin-top: 3.2rem;
-  animation: fromTopToBottom 0.6s;
+  animation: fromTopToBottom 0.8s;
 }
 
 #border-gradient {
@@ -63,6 +64,8 @@ nav {
   margin-block: 4rem;
   display: flex;
   justify-content: space-between;
+
+  animation: fromTopToBottom .8s;
 }
 
 nav div {
@@ -89,11 +92,6 @@ nav button {
 
 nav div:hover {
   transform: translateY(-1rem);
-  
-}
-
-nav button:hover {
-  background: var(--gradient);
 }
 
 /* === MAIN ======= */
@@ -119,15 +117,11 @@ section {
 }
 
 main section:nth-child(1) {
-  animation: fromBottomToTop .3s;
+  animation: fromLeftToRight .8s;
 }
 
 main section:nth-child(2) {
-  animation: fromBottomToTop .6s;
-}
-
-main section:nth-child(3) {
-  animation: fromBottomToTop .9s;
+  animation: fromRightToLeft 1s;
 }
 
 main div {
@@ -176,24 +170,79 @@ section ul img {
   border-radius: 0.8rem;
 }
 
-/* Sections Main-Games */
+/* Sections Games */
 
-main#games section:nth-child(2) ul img {
+body.main-games main#games section:nth-child(2) ul img {
   width: inherit;
   height: inherit;
   border-radius: 50%;
   border: 1px solid #443e54;
 }
 
-body.main-movies main#games {
-  animation: disappear 1s forwards;
+body.main-games main#games {
+  display: flex;
+}
+
+body.main-games main#movies {
   display: none;
 }
 
-/* Sections Main-Movies */
+body.main-games main#musics {
+  display: none;
+}
 
-body.main-movies main#movies section{
-  animation: fromBottomToTop 1s;
+/* Sections Movies */
+
+body.main-movies main#movies {
+  display: flex;
+}
+
+body.main-movies main#games {
+  display: none;
+}
+
+body.main-movies main#musics {
+  display: none;
+}
+
+/* Sections Musics */
+
+body.main-musics main#musics {
+  display: flex;
+}
+
+body.main-musics main#games {
+  display: none;
+}
+
+body.main-musics main#movies {
+  display: none;
+}
+
+main#musics section:nth-child(2) {
+  margin-bottom: 4.8rem;
+}
+
+main#musics section:nth-child(2) ul li {
+  width: 100%;
+}
+
+main#musics section ul li a.music {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+
+  background-color: #1db954;
+  padding: 1rem;
+  border-radius: .8rem;
+}
+
+main#musics section:nth-child(2) ul li:hover {
+  transform: scale(1.05);
 }
 
 /* === Animations ======= */
@@ -201,19 +250,7 @@ body.main-movies main#movies section{
 @keyframes fromTopToBottom {
   from {
     opacity: 0;
-    transform: translateY(-3rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fromBottomToTop {
-  from {
-    opacity: 0;
-    transform: translateY(3rem);
+    transform: translateY(-5rem);
   }
 
   to {
@@ -225,7 +262,7 @@ body.main-movies main#movies section{
 @keyframes fromLeftToRight {
   from {
     opacity: 0;
-    transform: translateX(-3rem);
+    transform: translateX(-10rem);
   }
 
   to {
@@ -237,7 +274,7 @@ body.main-movies main#movies section{
 @keyframes fromRightToLeft {
   from {
     opacity: 0;
-    transform: translateX(3rem);
+    transform: translateX(10rem);
   }
 
   to {
