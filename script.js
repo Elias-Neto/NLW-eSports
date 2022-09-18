@@ -1,5 +1,3 @@
-
-
 function mainGames() {
   document.body.classList.remove('main-musics')
   document.body.classList.remove('main-movies')
